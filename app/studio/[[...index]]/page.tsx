@@ -1,16 +1,11 @@
-"use client";
-import { NextStudio } from "next-sanity/studio";
-import config from "../../../sanity.config";
-import {StudioProvider, StudioLayout} from 'sanity'
+import { Studio } from "./studio";
+
+export const dynamic = "force-static" 
+
+export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {
   return (
-    <div className="absolute top-0 right-0 left-0 bottom-0 w-screen">
-      <NextStudio config={config}>
-        <StudioProvider config={config}>
-          <StudioLayout />
-        </StudioProvider>
-      </NextStudio>
-    </div>
+    <Studio />
   );
 }

@@ -13,10 +13,7 @@ export default defineConfig({
   schema,
   plugins: [
     structureTool(),
-    visionTool({
-      defaultApiVersion: apiVersion,
-      defaultDataset: dataset,
-    }),
+  
   ],
   // tools: (prev, { currentUser }) => {
   //   const isAdmin = currentUser?.roles.some(
